@@ -41,7 +41,11 @@ crontab -e
 
 ### Testing / Troubleshooting
 
-To check of the mail command is working which the script depends on
+* After two login and out attempts to the server you should get an email.
+* Check your spam folder it might end up there, and whitelist the email.
+* The script executes every 5 minutes on a cron so you won't get an email immediately.
+
+To check of the mail command is working on your server which the script depends on
 
 ``` echo -e "Test body" | mail -s 'Subject' youremail@whatever.com ```
 

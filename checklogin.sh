@@ -1,5 +1,7 @@
 #!/bin/sh
 #
+# License: (MIT), Copyright (C) 2019 checklogin Author Phil Chen
+#
 #The Below Directory Path is where the script will keep track of logins 
 BASE=/var/log/logins
 EMAIL="youremail@whatever.com"
