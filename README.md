@@ -10,13 +10,19 @@ This solution provides email notification for logins of linux/unix system users.
 * Unix/Linux Mail command to install the *nix Mail command see below.
 
 * CentOS/Redhat 7/6/5
-```bash sudo yum install mailx```
+```bash
+sudo yum install mailx
+```
 
 * Fedora 22+
-```bash dnf install mailx```
+```bash
+dnf install mailx
+```
 
 * Ubuntu/Debian/LinuxMint
-```bash sudo apt-get install mailutils```
+```bash
+sudo apt-get install mailutils
+```
 
 ## Setup:
 
@@ -30,7 +36,7 @@ sudo mkdir /var/log/logins
 sudo chown youruser:youruser /var/log/logins
 ```
 
-Change the email address to send notification marked EMAIL
+Change the email address in the script after EMAIL to send notification to.
 ```bash
 vim checklogin.sh
 ```
