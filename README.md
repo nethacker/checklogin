@@ -42,7 +42,7 @@ vim checklogin.sh
 ```
 
 ```bash
-sudo cp checklogin.sh /var/log/logins
+cp checklogin.sh /var/log/logins
 
 sudo chmod 755 /var/log/logins/checklogin.sh
 
@@ -60,7 +60,7 @@ crontab -e
 To check of the mail command is working on your server which the script depends on
 
 ```bash
-echo -e "Test body" | mail -s 'Subject' youremail@whatever.com
+echo -e "Test body" | mail -s 'Test Email' youremail@whatever.com
 ```
 
 To check if you can see your login history

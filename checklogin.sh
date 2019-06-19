@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # License: (MIT), Copyright (C) 2019 checklogin Author Phil Chen
 #
