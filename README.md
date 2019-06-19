@@ -10,13 +10,13 @@ This solution provides email notification for logins of linux/unix system users.
 * Unix/Linux Mail command to install the *nix Mail command see below.
 
 * CentOS/Redhat 7/6/5
-```sudo yum install mailx```
+```bash sudo yum install mailx```
 
 * Fedora 22+
-``` dnf install mailx```
+```bash dnf install mailx```
 
 * Ubuntu/Debian/LinuxMint
-```sudo apt-get install mailutils```
+```bash sudo apt-get install mailutils```
 
 ## Setup:
 
@@ -28,7 +28,14 @@ cd checklogin
 sudo mkdir /var/log/logins
 
 sudo chown youruser:youruser /var/log/logins
+```
 
+Change the email address to send notification marked EMAIL
+```bash
+vim checklogin.sh
+```
+
+```bash
 sudo cp checklogin.sh /var/log/logins
 
 sudo chmod 755 /var/log/logins/checklogin.sh
@@ -36,7 +43,6 @@ sudo chmod 755 /var/log/logins/checklogin.sh
 crontab -e
 
 */5 * * * * /var/log/logins/checklogin.sh
-
 ```
 
 ### Testing / Troubleshooting
@@ -47,9 +53,13 @@ crontab -e
 
 To check of the mail command is working on your server which the script depends on
 
-``` echo -e "Test body" | mail -s 'Subject' youremail@whatever.com ```
+```bash
+echo -e "Test body" | mail -s 'Subject' youremail@whatever.com
+```
 
 To check if you can see your login history
 
-```/usr/bin/last```
+```bash
+/usr/bin/last
+```
 
