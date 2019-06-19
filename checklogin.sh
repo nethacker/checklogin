@@ -2,7 +2,8 @@
 #
 # License: (MIT), Copyright (C) 2019 checklogin Author Phil Chen
 #
-#The Below Directory Path is where the script will keep track of logins 
+# The below directory path under BASE is where the script will keep track of logins
+# and hold the checklogin.sh script itself. EMAIL is what email gets notified of logins change this. 
 BASE=/var/log/logins
 EMAIL="youremail@whatever.com"
 #
@@ -10,21 +11,21 @@ EMAIL="youremail@whatever.com"
 HISTORY=${BASE}/history
 CURRENT=${BASE}/current
 #
-# Failure Function
+# Failure function
 fail()
 {
-echo "Failed: $*"
-exit 1
+    echo "Failed: $*"
+    exit 1
 }
 #
 # Function to clean output from the last command
 clean_last()
 {
-/usr/bin/last | sed '{
- /^reboot /d
-/^$/d
-/^wtmp begins /d
-}'
+    /usr/bin/last | sed '{
+        /^reboot /d
+        /^$/d
+        /^wtmp begins /d
+    }'
 }
 MYGROUP=`id -gn`
 MYIDENT=`id -un`
@@ -37,6 +38,7 @@ MYIDENT=`id -un`
 #
 # Store current info
 clean_last >${CURRENT}
+#
 # Is there a history file?
 if [ -f ${HISTORY} ]
 then
