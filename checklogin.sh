@@ -2,7 +2,7 @@
 #
 #The Below Directory Path is where the script will keep track of logins 
 BASE=/var/log/logins
-EMAIL=youremail@whatever.com
+EMAIL="youremail@whatever.com"
 #
 # The two files below checked for a delta against each other 
 HISTORY=${BASE}/history
